@@ -1,15 +1,29 @@
 p { 
-    color:red!important; /* va a sobreescribir a todos */
+    color:red!important; /*va a sobreescribir a todos*/
 }
 #primer-parrafo {
-    color:blue; /* va a sobreescribir solo a las clases */
-}                 /* pseudoclases y etiquetas */
+    color:blue; /*va a sobreescribir solo a las clases pseudoclases y etiquetas*/
+}                
 .parrafo {      
-    color:green; /* va a sobreescribir solo a las etiquetas */
-}                  /* y pseudoelementos */
+    color:green; /* va a sobreescribir solo a las etiquetas y pseudoelementos */
+}                  
 p {
     color:orange;
 } 
 /* modificación de prueba para GitHub de forma local usando VSCode */
 /* esta es una edición desde GitHub online pero hice una desde VSCode que fue registrada por GitHub desktop antes que no se vio reflejada acá */
 /* al final estaba todo bien, había sido que me faltó "pushear" los cambios desde GitHub desktop y al hacerlo me llegó la notificación de la modificación hecha desde la versión online. Me dió la opción de abrirlo con el VSCode para resolver los conflictos y en una decisión salomónica(?) mantuve a ambos para que me quede el registro */
+div {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    animation-name: cambiarColor;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    /* animation: cambiarColor 2s 1s; */
+}
+
+@keyframes cambiarColor {
+    from {background-color: red;}
+    to {background-color: yellow;}
+}
