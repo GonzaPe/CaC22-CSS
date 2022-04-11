@@ -36,6 +36,80 @@
         @media only screen and (min-width: 1200px) {
           .example {background: pink;}
         }
+        .grid-container {
+            display: grid;                           /*Convierte el contenedor en una grilla */
+         /* display: inline-grid; */        
+            grid-template-columns: auto auto auto;   /*Forma en que se distribuyen los elementos*/
+            gap: 10px;                               /*Espacios entre los hijos*/
+            background-color: limegreen;           /*Color de fondo del contenedor */
+            padding: 10px;                           /*Coloco un espacio alrededor del conjunto de hijos*/
+            border: 2px solid limegreen;           /*El borde no se ve */
+            border-radius: 15px;
+        }
+
+
+        .grande {
+            display: none;
+        }
+
+        .chico {
+            display: block;
+            background-color: lightblue;
+            padding: 10px
+        }
+
+        div::first-letter {
+            /*usamos un pseudoelemento */
+            background: white;
+            font-size: 29px;
+            padding: 0px 10px
+        }
+
+        .grid-container {
+            display: grid;
+            /*Convierte el contenedor en una grilla */
+            grid-template-columns: 60% 40%;
+            /*Forma en que se distribuyen los elementos*/
+            gap: 3px;
+            /*Espacios entre los hijos*/
+            /*Coloco un espacio alrededor del conjunto de hijos*/
+            justify-content: space-evenly;
+            /*Repartimos el espacio horizontal entre todas las columnas */
+        }
+
+        .grid-item {
+            background-color: limegreen;
+            /*Color de fondo de los hijos */
+            padding: 10px;
+            border: 1px solid black;
+            /*Borde de los elementos hijos */
+        }
+
+        /* Pantallas a partir de 800 píxeles 
+        (Ancho como mínimo de 800px)*/
+        @media only screen and (min-width: 800px) {
+            .grid-container {
+                grid-template-columns: 40% 30% auto;
+                gap: 2vw;
+            }
+
+            div:nth-child(1) { order: 1; }
+            div:nth-child(2) { order: 2; }
+            div:nth-child(3) { order: 4; }
+            div:nth-child(4) { order: 5; }
+            div:nth-child(5) { order: 3; }
+            div:nth-child(6) { order: 6; }
+
+            .grande {
+                display: block;
+                background-color: orange;
+                padding: 10px
+            }
+
+            .chico {
+                display: none;
+            }
+        }
         </style>
 </head>
 
@@ -46,6 +120,41 @@
     </p>
     <div>Div con animación</div>
     <p class="example">Resize the browser window to see how the background color of this paragraph changes on different screen sizes.</p>
+
+    <h2>CSS GRID items</h2>
+
+    <p>Los elementos dentro del contenedor pueden ocupar mas de una fila / columna.</p>
+    <p>Para ello se utilizan las propiedades <mark><code>grid-row-start</code></mark>,  <mark><code>grid-column-start</code></mark>,  <mark><code>grid-row-end</code></mark>, <mark><code>grid-column-end</code></mark> y <mark><code>grid-area</code></mark>.</p>
+
+    <h2>CSS Grid con Media Queries</h2>
+
+    <p>Este ejemplo posee un <mark><code>punto de corte</code></mark> en 800px. Cuando la pantalla tiene un ancho menor,
+        el grid tiene 2 columnas con tres elementos. Si el ancho es mayor a ese valor, el grid posee dos filas de tres
+        elementos. </p>
+
+    <p>El párrafo siguiente cambia en el punto de corte:</p>
+    <p class="chico">Nota: los elementos 5 y 6 modifican quedan sobre el <b>borde inferior</b> de la grilla.</p>
+
+    <p class="grande">Nota: los elementos 5 y 6 cambian su orden dentro de la lista de elementos del grid para quedar
+        sobre el <b>lateral izquierdo</b>.</p>
+
+    <div class="grid-container">
+        <div class="grid-item">1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores expedita minus fugit,
+            nam at inventore cum, et repellendus fuga eius, ipsam quasi voluptates necessitatibus omnis distinctio
+            aliquam iste perspiciatis vero!</div>
+        <div class="grid-item">2 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus assumenda, odio
+            asperiores officiis quos id.</div>
+        <div class="grid-item">3 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum at fuga perspiciatis
+            animi vel quidem ducimus. Rem mollitia magni eveniet!</div>
+        <div class="grid-item">4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, quibusdam.</div>
+        <div class="grid-item" style="background-color:coral">5 Lorem, ipsum dolor sit amet consectetur adipisicing
+            elit. Eius, nam.</div>
+        <div class="grid-item" style="background-color:orange">6 Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Eos, pariatur.</div>
+    </div><br>
+
+
+
 </body>
 
 </html>
