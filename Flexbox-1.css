@@ -1,0 +1,15 @@
+.contenedor {
+    display: flex; 
+    /* Indico que el display es flexible */
+    background-color: aquamarine;
+    flex-direction: row;
+}
+.item {
+    background-color: grey;
+    background-color: red;
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+}
