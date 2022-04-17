@@ -1,0 +1,13 @@
+.box {
+    background-color: brown;
+    padding: 10px;
+    color: blue;
+    text-align: center;
+}
+
+.contenedor {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 2fr 3fr;
+    gap: 5px;
+}
