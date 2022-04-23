@@ -1,0 +1,10 @@
+.ex1 { 
+  margin: auto; 
+  background: gold; 
+  width: 66%; 
+} 
+.ex2 { 
+  margin: 20px 0px 0 -20px; 
+  background: gold; 
+  width: 66%; 
+}
