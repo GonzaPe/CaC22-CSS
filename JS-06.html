@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript-06</title>
+</head>
+<body>
+    <script>
+        var persona = {
+    nombre: "Juan", //variable del objeto. Par variable: valor,
+    apellido: "Paz",
+    dni: 11223344,
+    //Método: es una propiedad más
+    nombreCompleto: function () { //Esta variable guarda el resultado de una función
+        return this.nombre + " " + this.apellido; //Función anónima
+        //El string que devuelve tiene información del propio objeto
+    }
+};
+document.write(persona) // Imprimo el objeto
+document.write(persona.nombre) // Imprimo una propiedad del objeto: Juan
+document.write(persona.nombreCompleto()) // Imprimo el resultado de una función del objeto: Juan Paz
+
+    </script>
+</body>
+</html>
