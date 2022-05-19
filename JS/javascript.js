@@ -10,3 +10,4 @@ superficie += 1
 document.write("usando superficie += 1 queda" + superficie)
 superficie++
 document.write("usando superficie++ queda" + superficie)
+console.log("Escribo desde la consola")
